@@ -1,0 +1,23 @@
+.DrinkSlider {
+    background-color: #e4ceb4;
+    height: 360px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.DrinkCardContainer {
+    width: 100%;
+    display: flex;
+    margin-bottom: 15px;
+    /* Adjust the gap between cards as per your preference */
+}
+
+.simplebar-scrollbar::before {
+    background-color: #683c11; /* Replace this with your desired color */
+    height: 100%;
+    inset: 0;
+}
+.simplebar-track.simplebar-horizontal {
+    background-color: #fff8f0;
+}

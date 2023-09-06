@@ -1,0 +1,10 @@
+.MenuCard {
+    background-color: white;
+    height: 300px;
+    width: 300px;
+    border-radius: 25px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: lightgrey;
+    position: auto;
+}

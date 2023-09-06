@@ -1,0 +1,20 @@
+.Menu {
+    background-color: #fff8f0;
+    height: 800px;
+    padding: 40px;
+    position: relative;
+    font-size: 25px;
+}
+
+.Menu-container {
+    display: flex;
+    justify-content: center;
+}
+
+.MenuCard-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr;
+    grid-gap: 30px;
+    margin-top: 40px;
+}
