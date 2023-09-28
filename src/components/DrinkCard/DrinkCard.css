@@ -6,6 +6,15 @@
     position: relative;
     display: flex;
     justify-content: center;
+    align-items: center; /* Vertically center the content */
     margin: 15px;
     box-shadow: 4px 4px 8px 2px rgba(104, 60, 17, 0.5);
+}
+
+.DrinkCard img {
+    max-width: 60%; /* Ensure the image fits within the card */
+    max-height: 60%; /* Ensure the image fits within the card */
+    object-fit: cover; /* Maintain the image's aspect ratio and cover the entire card */
+    padding-bottom: 30px;
+    border-radius: 25px; /* Match the card's border radius */
 }
