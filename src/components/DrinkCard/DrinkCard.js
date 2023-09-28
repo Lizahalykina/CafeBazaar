@@ -1,14 +1,13 @@
-import DrinkCardButton from '../DrinkCardButton/DrinkCardButton';
-import './DrinkCard.css';
+import DrinkCardButton from "../DrinkCardButton/DrinkCardButton";
+import "./DrinkCard.css";
 
 function DrinkCard(props) {
     return (
-      <div className="DrinkCard
-    ">
-      <DrinkCardButton text={props.drink.name}/>  
-      </div>
+        <div className="DrinkCard">
+            <img src={props.drink.imageSrc} alt={props.drink.name} />
+            <DrinkCardButton text={props.drink.name} />
+        </div>
     );
-  }
-  
-  export default DrinkCard
-;
+}
+
+export default DrinkCard;

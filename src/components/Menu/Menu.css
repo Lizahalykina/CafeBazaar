@@ -1,9 +1,12 @@
 .Menu {
     background-color: #fff8f0;
-    height: 800px;
-    padding: 40px;
+    height: 100%;
+    padding: 10px;
     position: relative;
-    font-size: 25px;
+}
+
+h3 {
+    font-size: 40px;
 }
 
 .Menu-container {
@@ -16,5 +19,5 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 0.5fr;
     grid-gap: 30px;
-    margin-top: 40px;
+    margin: 40px;
 }

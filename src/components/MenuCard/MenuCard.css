@@ -4,7 +4,13 @@
     width: 300px;
     border-radius: 25px;
     border-width: 2px;
-    border-style: solid;
-    border-color: lightgrey;
-    position: auto;
+    border: 2px solid lightgrey;
+    overflow: hidden;
+    margin: 10px;
+}
+
+.MenuCard img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
 }
