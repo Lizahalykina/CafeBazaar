@@ -1,20 +1,95 @@
+.DrinkCard-Selected {
+    background-color: #fff8f0;
+    width: 620px;
+    height: 450px;
+    border-radius: 25px;
+    justify-content: space-between;
+    display: inline-flex;
+    align-items: center;
+    margin: 15px;
+    box-shadow: 0 0 10px 0.2px rgba(104, 60, 17, 0.1);
+}
+
+.DrinkCard-Selected img {
+    width: 230px;
+    height: 80%;
+    margin: 20px;
+    margin-left: 50px;
+}
+
+.drinkCardButton-Selected {
+    background-color: #f4e7d8;
+    height: 320px;
+    width: 230px;
+    margin: 15px;
+    margin-right: 50px;
+    color: #fff;
+    border-radius: 25px;
+    align-items: center;
+    padding: 10px;
+    cursor: default;
+}
+
+.DrinkName-Selected {
+    margin-top: 10%;
+    margin-bottom: 0%;
+    font-size: 35px;
+    font-family: "Inria Serif", serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.DrinkDescription {
+    margin-top: 0%;
+    font-size: 18px;
+    font-family: "Comfortaa";
+    font-weight: 600;
+    padding: 20px;
+}
+
 .DrinkCard {
     background-color: #fff8f0;
-    min-width: 200px;
-    height: 260px;
+    width: 270px;
+    height: 300px;
     border-radius: 25px;
     position: relative;
     display: flex;
     justify-content: center;
-    align-items: center; /* Vertically center the content */
+    align-items: center;
     margin: 15px;
-    box-shadow: 4px 4px 8px 2px rgba(104, 60, 17, 0.5);
+    box-shadow: 0 0 10px 0.2px rgba(104, 60, 17, 0.1);
 }
 
 .DrinkCard img {
-    max-width: 60%; /* Ensure the image fits within the card */
-    max-height: 60%; /* Ensure the image fits within the card */
-    object-fit: cover; /* Maintain the image's aspect ratio and cover the entire card */
+    max-width: 150px;
+    max-height: 150px;
     padding-bottom: 30px;
-    border-radius: 25px; /* Match the card's border radius */
+}
+
+.drinkCardButton {
+    background-color: #f4e7d8;
+    width: 180px;
+    height: 40px;
+    color: #fff;
+    border-radius: 25px;
+    bottom: 20px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.DrinkName {
+    font-size: 20px;
+    font-family: "Inria Serif", serif;
+    font-weight: 800;
+    font-style: normal;
+}
+
+p {
+    letter-spacing: 2px;
+    line-height: 1.2;
+    color: #410b13;
 }
