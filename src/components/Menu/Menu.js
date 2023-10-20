@@ -1,9 +1,10 @@
 // Import the necessary components and styles
 import MenuCard from "../MenuCard/MenuCard";
+import React, { forwardRef } from "react";
 import "./Menu.css";
 
 // Define the Menu functional component
-function Menu() {
+function Menu({ menuRef, className }) {
     // Define a constant array of plate items for the menu
     const plates = [
         {
@@ -61,12 +62,26 @@ function Menu() {
         return <MenuCard plate={plate} imageSrc={plate.imageSrc} key={index} />;
     });
 
+    const downloadMenu = () => {};
     // Render the Menu component structure
     return (
-        <div className="Menu">
-            <h3>Menu</h3>
-            <div className="Menu-container">
-                <div className="MenuCard-container">{plateslisted}</div>
+        <div className={className}>
+            <div className="Menu" ref={menuRef}>
+                <h4>Menu</h4>
+                <div className="Menu-container">
+                    <div className="MenuCard-container">
+                        {plateslisted}
+                        <p></p>
+                        <a
+                            onClick={downloadMenu}
+                            className="DownloadMenuButton"
+                            href="/MockAssets/CafeBazaarMenu.pdf"
+                            target="_blank"
+                        >
+                            Download our menu
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     );

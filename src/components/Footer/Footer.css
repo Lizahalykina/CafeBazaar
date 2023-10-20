@@ -1,37 +1,111 @@
 .Footer {
-    width: 100%;
-    background-color: #e4ceb4;
+    width: 80%;
+    background-color: #fff8f0;
     display: flex;
+    margin: auto;
     flex-direction: column; /* Makes Footer children stack vertically */
     align-items: center; /* Aligns Footer children centrally */
-    padding: 10px;
+    border-radius: 65px 65px 0 0;
+}
+
+.FooterContainer {
+    align-items: center;
 }
 
 .UpperFooter {
-    width: 50%;
+    padding-top: 170px;
+    padding-bottom: 40px;
+    width: 70%;
     display: flex;
     justify-content: space-between;
     margin: 0 auto; /* This centers the UpperFooter within Footer */
 }
 
 .ContactDetails {
-    font-size: larger;
+    font-size: 18px;
     text-align: left;
+    font-weight: 500;
+    color: #410b13;
+    max-width: 60%;
+    margin-left: 40px;
 }
 
-.ContactDetails ul li {
-    margin-bottom: 30px; /* Increase the distance between list items */
+.LogoFooter {
+    width: 400px;
+    margin-bottom: 20px;
 }
 
 .ContactDetails,
 .Map {
-    width: 300px;
+    width: 650px;
     height: 300px;
-    padding: 25px;
+}
+
+.Map {
+    cursor: pointer;
+}
+
+input {
+    padding: 20px;
+    border: none;
+    border-color: #f4e7d8;
+    border-radius: 50px;
+    text-align: center;
+    font-family: "Comfortaa";
+    font-size: 15px;
+    font-weight: 500;
+}
+
+::-webkit-input-placeholder {
+    color: #cecccb;
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    padding-top: 0px;
+}
+
+.Name {
+    width: 100px;
+    height: 20px;
+    margin-right: 25px;
+    box-shadow: 0 0 10px 0.2px rgba(104, 60, 17, 0.1);
+}
+
+.Email {
+    width: 650px;
+    height: 20px;
+    box-shadow: 0 0 10px 0.2px rgba(104, 60, 17, 0.1);
+}
+
+.Email::-webkit-input-placeholder {
+    transform: translate(-95px, 0);
+}
+
+.SignUpButton {
+    transform: translate(-85px, 0);
+    cursor: pointer;
+    transition-duration: 0.5s;
+}
+
+.SignUpButton:hover {
+    opacity: 50%;
+    transition-duration: 0.2s;
+}
+
+.hide {
+    display: none;
 }
 
 .FooterEnd {
     padding: 10px;
+    margin-top: 50px;
+    width: 90%;
+    background-color: #f4e7d8;
+    border-radius: 50px 50px 0 0;
     text-align: center;
     font-size: 20px;
+    font-weight: 400;
+    color: #88837f;
 }

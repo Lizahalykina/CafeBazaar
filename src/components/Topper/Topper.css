@@ -2,40 +2,55 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #fff8f0;
 }
 
 .Topper {
-    align-items: center;
-    width: 100%;
-    height: 200px;
+    width: 70%;
+    height: 180px;
+    background-color: #fff8f0;
     display: flex;
-    align-items: center;
-}
-
-h1 {
-    margin-right: auto; /* Pushes the h1 to the far left */
-    padding: 50px;
-    font-size: 20px;
-    cursor: pointer;
+    justify-content: space-between; /* Align items to the left and right */
+    align-items: flex-end;
+    padding: 10px;
+    padding-top: 100px;
+    border-radius: 0 0 65px 65px;
 }
 
 .Logo {
-    width: 70vw;
-    height: 150px;
-    margin: 20px; /* Adds some space around the logo, feel free to adjust */
+    width: 300px;
+    display: flex; /* Make the Logo container a flex container */
+    align-items: flex-end; /* Align Logo at the bottom */
+    margin-right: 20px; /* Add some space between Logo and topText */
+    margin-left: 70px;
+    margin-bottom: 20px;
 }
 
-h2 {
-    margin-left: auto; /* Pushes the h2 to the far right */
-    padding: 50px;
-    font-size: 20px;
+.topText {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 0; /* Remove any margin that might be affecting the alignment */
+    margin-right: 50px;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+    font-family: "Inria Serif", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 30px;
     cursor: pointer;
+    color: #410b13;
+    align-items: center;
+    margin-left: 20px;
+    margin-right: 10px;
+    padding: 16px;
 }
 
 .Bean {
     width: 100%;
-    height: 350px;
-    margin: 20px;
-    margin-top: 20px;
+    height: 250px;
+    margin: 40px;
+    margin-top: 70px;
 }

@@ -1,12 +1,12 @@
-import "./DrinkCardButton.css";
-
 function DrinkCardButton(props) {
     return (
-        <div
-            className="DrinkCardButton
-    "
-        >
-            <p>{props.text}</p>
+        <div className={props.className}>
+            <p className={props.selected ? "DrinkName-Selected" : "DrinkName"}>
+                {props.text}
+            </p>
+            {props.description && (
+                <p className="DrinkDescription">{props.description}</p>
+            )}
         </div>
     );
 }
