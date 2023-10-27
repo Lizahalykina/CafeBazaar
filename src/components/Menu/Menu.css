@@ -40,3 +40,39 @@ h4 {
     margin-top: 0;
     padding-bottom: 20px;
 }
+
+.DownloadMenuButtonMobile {
+    display: none;
+}
+
+@media (max-width: 1100px) {
+    h4 {
+        font-size: 60px; /* Reduce font size for mobile */
+        transform: translate(0px, -5px); /* Reset the transformation */
+    }
+
+    .MenuCard-container {
+        grid-template-columns: 0.5fr 0.5fr; /* Stack items on mobile screens */
+        padding: 50px 20px; /* Reduce padding */
+        grid-gap: 8px;
+        border-radius: 35px;
+    }
+
+    .DownloadMenuButton {
+        display: none;
+    }
+
+    .DownloadMenuButtonMobile {
+        display: block;
+        margin: auto;
+        transform: translate(0, -70px);
+        font-size: 20px;
+        font-family: "Inria Serif", serif;
+        font-weight: 600;
+        font-style: normal;
+        letter-spacing: 0.5px;
+        color: #410b13;
+        margin-top: 0;
+        padding-bottom: 20px;
+    }
+}

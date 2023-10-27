@@ -13,7 +13,7 @@ function DrinkSlider({ coffeeRef }) {
         {
             name: "Frappe",
             imageSrc: "/MockAssets/VectorFrappe.svg",
-            text: "Chilled blend of robust espresso and creamy milk, crowned with a light whipped topping.",
+            text: "Chilled blend of robust espresso and creamy milk,with a light whipped topping.",
         },
         {
             name: "Latte",
