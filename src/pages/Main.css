@@ -14,3 +14,10 @@
     transform: translate(0, 130px);
     z-index: 2;
 }
+
+@media (max-width: 768px) {
+    .MenuMain {
+        transform: translate(0, 90px);
+        z-index: 2;
+    }
+}

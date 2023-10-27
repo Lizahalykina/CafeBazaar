@@ -82,6 +82,14 @@ function Menu({ menuRef, className }) {
                         </a>
                     </div>
                 </div>
+                <a
+                    onClick={downloadMenu}
+                    className="DownloadMenuButtonMobile"
+                    href="/MockAssets/CafeBazaarMenu.pdf"
+                    target="_blank"
+                >
+                    Download our menu
+                </a>
             </div>
         </div>
     );

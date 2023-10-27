@@ -13,9 +13,16 @@ function Topper({ footerRef, menuRef, coffeeRef }) {
     return (
         <div className="Wrapper">
             <div className="Topper">
-                <div className="Logo">
-                    <img src={"/MockAssets/LogoTopperWeb.svg"} alt="Logo" />
-                </div>
+                <img
+                    className="Logo"
+                    src={"/MockAssets/LogoTopperWeb.svg"}
+                    alt="Logo"
+                />
+                <img
+                    className="LogoMobile"
+                    src={"/MockAssets/LogoMobileTopper.svg"}
+                    alt="LogoMobile"
+                />
                 <div className="topText">
                     <div>
                         <h1 onClick={scrollToDrinkSlider}>Coffee</h1>
@@ -29,6 +36,11 @@ function Topper({ footerRef, menuRef, coffeeRef }) {
                 </div>
             </div>
             <img className="Bean" src={"/MockAssets/BeanLong.svg"} alt="Bean" />
+            <img
+                className="BeanMobile"
+                src={"/MockAssets/BeanTopperMobile.svg"}
+                alt="BeanMobile"
+            />
         </div>
     );
 }

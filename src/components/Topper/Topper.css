@@ -54,3 +54,48 @@ h3 {
     margin: 40px;
     margin-top: 70px;
 }
+
+/* Desktop specific styles */
+@media (min-width: 1400px) {
+    .LogoMobile,
+    .BeanMobile {
+        display: none; /* Hide mobile specific images on desktop */
+    }
+}
+
+/* Mobile specific styles */
+@media (max-width: 1400px) {
+    .Logo,
+    .Bean {
+        display: none; /* Hide desktop specific images on mobile */
+    }
+
+    .Topper {
+        width: 96%; /* Adjust width for mobile layout */
+        height: auto;
+        padding-top: 0px; /* Adjust padding for mobile layout */
+        border-radius: 0 0 35px 35px;
+        /* Add any other necessary style adjustments for mobile */
+    }
+
+    .LogoMobile {
+        /* Define styles specific to mobile version of the logo */
+        width: 200px;
+        padding: 5px;
+        display: flex;
+        margin: auto;
+
+        /* ... */
+    }
+
+    .BeanMobile {
+        /* Define styles specific to mobile version of the bean image */
+        width: 80%;
+        margin: 20px 0;
+        /* ... */
+    }
+
+    .topText {
+        display: none; /* Hide topText on mobile */
+    }
+}
