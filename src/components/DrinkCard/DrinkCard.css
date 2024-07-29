@@ -1,16 +1,20 @@
 .DrinkCard {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
     text-align: left;
-    padding: 20px;
     width: 100%;
     font-family: 'Georgia', serif;
+}
+.DrinkCardImageBox{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .DrinkCard img {
     width: 100%;
-    max-width: 200px;
+    max-width: 300px;
     height: auto;
     object-fit: cover;
 }

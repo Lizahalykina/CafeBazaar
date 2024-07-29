@@ -10,7 +10,7 @@ function Footer({ pageContainerRef }) {
         const handleScroll = () => {
             const currentScroll = container.scrollLeft;
             const totalWidth = container.scrollWidth - container.clientWidth;
-            const scrollPercentage = (currentScroll / totalWidth) * 100;
+            const scrollPercentage = (currentScroll / totalWidth) * 85;
             setScrollPosition(scrollPercentage);
         };
 
