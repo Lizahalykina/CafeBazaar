@@ -1,60 +1,50 @@
-import React, { forwardRef } from "react";
+import React, { useEffect, useState } from "react";
 import "./Footer.css";
 
-function Footer({ footerRef, className }) {
-    const openMap = () => {
-        const address = "CAFE+BAZAAR+Mikulášska+29+81101+Bratislava,+Slovakia";
-        const googleMapsLink = `https://www.google.com/maps?q=${address}`;
-        window.open(googleMapsLink, "_blank");
+function Footer({ pageContainerRef }) {
+    const [scrollPosition, setScrollPosition] = useState(0);
+
+    useEffect(() => {
+        const container = pageContainerRef.current;
+
+        const handleScroll = () => {
+            const currentScroll = container.scrollLeft;
+            const totalWidth = container.scrollWidth - container.clientWidth;
+            const scrollPercentage = (currentScroll / totalWidth) * 100;
+            setScrollPosition(scrollPercentage);
+        };
+
+        container.addEventListener("scroll", handleScroll);
+        return () => {
+            container.removeEventListener("scroll", handleScroll);
+        };
+    }, [pageContainerRef]);
+
+    const scrollToPage = (page) => {
+        const container = pageContainerRef.current;
+        const width = window.innerWidth;
+        container.scrollTo({
+            left: width * page,
+            behavior: "smooth",
+        });
     };
-    const signUp = () => {};
 
     return (
-        <div className={className}>
-            <div className="Footer" ref={footerRef}>
-                <div classname="FooterContainer">
-                    <div className="UpperFooter">
-                        <div className="ContactDetails">
-                            <img
-                                className="LogoFooter"
-                                src={"/MockAssets/LogoTopperWeb.svg"}
-                                alt="Logo"
-                            />
-                            <p>
-                                Sign up to our newsletter for exclusive updates
-                            </p>
-                            <form>
-                                <input
-                                    className="Name"
-                                    type="text"
-                                    placeholder="Name"
-                                />
-                                <input
-                                    className="Email"
-                                    type="text"
-                                    placeholder="Email Address"
-                                />
-                                <img
-                                    className="SignUpButton"
-                                    onClick={signUp}
-                                    src={"/MockAssets/ButtonRightFooter.svg"}
-                                    alt="SignUpButton"
-                                />
-                            </form>
-                        </div>
-                        <img
-                            className="Map"
-                            onClick={openMap}
-                            src={"/MockAssets/Map.svg"}
-                            alt="Map"
-                        />
-                    </div>
-                    <div className="FooterEnd">
-                        <p>® 2023 Cafe Bazaar</p>
-                    </div>
+        <div className="Footer">
+            <div
+                className="ScrollElement"
+                style={{ left: `${scrollPosition}%` }}
+                onClick={() => scrollToPage(0)}
+            >
+                <div className="circle"></div>
+                <div className="line-arrow">
+                    <div className="line"></div>
+                    <div className="arrow-tip"></div>
                 </div>
             </div>
+            <p>Reviews</p>
         </div>
     );
 }
+
 export default Footer;

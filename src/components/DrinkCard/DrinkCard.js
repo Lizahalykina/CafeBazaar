@@ -1,20 +1,17 @@
-import DrinkCardButton from "../DrinkCardButton/DrinkCardButton";
+import React from "react";
 import "./DrinkCard.css";
 
-function DrinkCard(props) {
+function DrinkCard({ imageSrc, title, description, ingredients }) {
     return (
-        <div className={props.selected ? "DrinkCard-Selected" : "DrinkCard"}>
-            <img src={props.drink.imageSrc} alt={props.drink.name} />
-            <DrinkCardButton
-                className={
-                    props.selected
-                        ? "drinkCardButton-Selected"
-                        : "drinkCardButton"
-                }
-                text={props.drink.name}
-                description={props.selected ? props.drink.text : null}
-                selected={props.selected}
-            />
+        <div className="DrinkCard">
+            <img src={imageSrc} alt={title} className="DrinkCardImage" />
+            <div className="DrinkCard__text">
+                <h2 className="DrinkCard__title">{title}</h2>
+                <p className="DrinkCard__description">{description}</p>
+                <p className="DrinkCard__ingredients">
+                    <strong>Ingredients:</strong> {ingredients}
+                </p>
+            </div>
         </div>
     );
 }

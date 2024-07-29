@@ -1,0 +1,48 @@
+.MainSection {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    padding: 20px;
+}
+
+.TextBlock {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 50%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    z-index: 2;
+}
+
+.MainImg {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+@media (max-width: 768px) {
+    .MainSection {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    .TextBlock {
+        width: 100%;
+        text-align: center;
+        z-index: 2;
+        padding: 0;
+    }
+
+    .MainImg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-40%, 20%);
+        width: 90vw;
+        z-index: 1;
+    }
+}
