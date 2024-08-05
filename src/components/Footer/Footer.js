@@ -10,7 +10,7 @@ function Footer({ pageContainerRef }) {
         const handleScroll = () => {
             const currentScroll = container.scrollLeft;
             const totalWidth = container.scrollWidth - container.clientWidth;
-            const scrollPercentage = (currentScroll / totalWidth) * 85;
+            const scrollPercentage = (currentScroll / totalWidth) * 80;
             setScrollPosition(scrollPercentage);
         };
 
@@ -29,6 +29,12 @@ function Footer({ pageContainerRef }) {
         });
     };
 
+    const openReview = () => {
+        window.open(
+            "https://www.tripadvisor.co.uk/Restaurant_Review-g274924-d15242596-Reviews-CAFE_BAZAAR-Bratislava_Bratislava_Region.html"
+        );
+    };
+
     return (
         <div className="Footer">
             <div
@@ -42,7 +48,7 @@ function Footer({ pageContainerRef }) {
                     <div className="arrow-tip"></div>
                 </div>
             </div>
-            <p>Reviews</p>
+            <p onClick={openReview}>Reviews</p>
         </div>
     );
 }

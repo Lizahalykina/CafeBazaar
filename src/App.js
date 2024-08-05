@@ -4,6 +4,7 @@ import Topper from "./components/Topper/Topper";
 import Footer from "./components/Footer/Footer";
 import MainSection from "./components/MainSection/MainSection";
 import About from "./components/About/About";
+import Location from "./components/Location/Location";
 import "./App.css";
 import "@fontsource/comfortaa";
 
@@ -31,15 +32,18 @@ function App() {
                     ? window.innerHeight
                     : window.innerWidth;
 
+            const scrollAmount = dimension / 3;
+            const scrollTime = 2000;
+
             if (deltaY > 0) {
                 container.scrollTo({
                     top:
                         window.innerWidth <= 768
-                            ? currentScroll + dimension
+                            ? currentScroll + scrollAmount
                             : undefined,
                     left:
                         window.innerWidth > 768
-                            ? currentScroll + dimension
+                            ? currentScroll + scrollAmount
                             : undefined,
                     behavior: "smooth",
                 });
@@ -47,11 +51,11 @@ function App() {
                 container.scrollTo({
                     top:
                         window.innerWidth <= 768
-                            ? currentScroll - dimension
+                            ? currentScroll - scrollAmount
                             : undefined,
                     left:
                         window.innerWidth > 768
-                            ? currentScroll - dimension
+                            ? currentScroll - scrollAmount
                             : undefined,
                     behavior: "smooth",
                 });
@@ -59,7 +63,7 @@ function App() {
 
             setTimeout(() => {
                 isScrolling = false;
-            }, 1000);
+            }, scrollTime);
         };
 
         container.addEventListener("wheel", handleScroll);
@@ -72,7 +76,7 @@ function App() {
     return (
         <div className="App">
             <Topper
-                footerRef={locationRef}
+                locationRef={locationRef}
                 menuRef={menuRef}
                 coffeeRef={coffeeRef}
             />
@@ -87,7 +91,7 @@ function App() {
                     <MenuPage coffeeRef={coffeeRef} />
                 </div>
                 <div className="Page4">
-                    <About coffeeRef={coffeeRef} />
+                    <Location locationRef={locationRef} />
                 </div>
             </div>
             <Footer className="Footer" pageContainerRef={pageContainerRef} />

@@ -3,7 +3,139 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 0;
+    padding: 0 20px;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
 }
 
+.LogoImg {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+}
 
+.desktop-link {
+    display: block;
+}
+
+.burger-menu {
+    display: none;
+    position: relative;
+    width: 30px;
+    height: 24px;
+    cursor: pointer;
+    z-index: 10000;
+    /* To ensure it is above other elements */
+}
+
+.burger-menu span {
+    display: block;
+    position: absolute;
+    height: 4px;
+    background: #000;
+    border-radius: 2px;
+    opacity: 1;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+}
+
+.burger-menu span:nth-child(1) {
+    width: 30px;
+    top: 0px;
+}
+
+.burger-menu span:nth-child(2) {
+    width: 24px;
+    top: 10px;
+}
+
+.burger-menu span:nth-child(3) {
+    width: 18px;
+    top: 20px;
+}
+
+.burger-menu.open span:nth-child(1) {
+    top: 10px;
+    width: 30px;
+    transform: rotate(45deg);
+}
+
+.burger-menu.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-menu.open span:nth-child(3) {
+    top: 10px;
+    width: 30px;
+    transform: rotate(-45deg);
+}
+
+.IconBean {
+    display: none;
+    height: 24px;
+    width: auto;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    display: none;
+}
+
+.dropdown-menu p {
+    margin: 0;
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 2px solid #333;
+}
+
+.dropdown-menu p:last-child {
+    border-bottom: none;
+}
+
+@media (max-width: 768px) {
+    .Topper {
+        padding: 0 10px;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    .LogoImg {
+        display: none;
+    }
+
+    .desktop-link {
+        display: none;
+    }
+
+    .burger-menu {
+        display: block;
+        position: absolute;
+        right: 10px;
+    }
+
+    .IconBean {
+        display: block;
+        position: absolute;
+        left: 10px;
+    }
+
+    .dropdown-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #CAD4BA;
+        z-index: 9999;
+    }
+
+    .dropdown-menu p {
+        font-size: 24px;
+        padding: 20px;
+    }
+}

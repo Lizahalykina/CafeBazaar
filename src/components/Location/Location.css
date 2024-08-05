@@ -1,195 +1,48 @@
 .Location {
-    width: 80%;
-    background-color: #fff8f0;
-    display: flex;
-    margin: auto;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 65px 65px 0 0;
-}
-
-.FooterContainer {
-    align-items: center;
-}
-
-.UpperFooter {
-    padding-top: 170px;
-    padding-bottom: 40px;
-    width: 70%;
-    display: flex;
-    justify-content: space-between;
-    margin: 0 auto;
-}
-
-.ContactDetails {
-    font-size: 18px;
-    text-align: left;
-    font-weight: 500;
-    color: #410b13;
-    max-width: 60%;
-    margin-left: 40px;
-}
-
-.LogoFooter {
-    width: 400px;
-    margin-bottom: 20px;
-}
-
-.ContactDetails,
-.Map {
-    width: 650px;
-    height: 300px;
-}
-
-.Map {
-    cursor: pointer;
-}
-
-input {
-    padding: 20px;
-    border: none;
-    border-color: #f4e7d8;
-    border-radius: 50px;
-    text-align: center;
-    font-family: "Comfortaa";
-    font-size: 15px;
-    font-weight: 500;
-}
-
-::-webkit-input-placeholder {
-    color: #cecccb;
-}
-
-form {
     display: flex;
     flex-direction: row;
-    padding-top: 0px;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
 }
 
-.Name {
-    width: 100px;
-    height: 20px;
-    margin-right: 25px;
-    box-shadow: 0 0 10px 0.2px rgba(104, 60, 17, 0.1);
+.Location>* {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: top;
+    box-sizing: border-box;
+    padding-top: 10%;
 }
 
-.Email {
-    width: 650px;
-    height: 20px;
-    box-shadow: 0 0 10px 0.2px rgba(104, 60, 17, 0.1);
+.TextBlock.spread {
+    height: 60%;
+    width: 100%;
+    justify-content: top;
+    padding-top: 0;
 }
 
-.Email::-webkit-input-placeholder {
-    transform: translate(-95px, 0);
+.CafeImg {
+    display: flex;
+    height: 170%;
+    transform: translate(0%, -20%);
+    width: auto;
+    object-fit: contain;
 }
 
-.SignUpButton {
-    transform: translate(-85px, 0);
-    cursor: pointer;
-    transition-duration: 0.5s;
-}
-
-.SignUpButton:hover {
-    opacity: 50%;
-    transition-duration: 0.2s;
-}
-
-.hide {
-    display: none;
-}
-
-.FooterEnd {
-    padding: 10px;
-    margin-top: 50px;
-    width: 90%;
-    background-color: #f4e7d8;
-    border-radius: 65px 65px 0 0;
-    text-align: center;
-    font-size: 20px;
-    font-weight: 400;
-    color: #88837f;
-}
-
-@media (max-width: 1100px) {
-    .Footer {
-        width: 100%;
-        border-radius: 35px 35px 0 0;
-    }
-
-    .UpperFooter {
-        padding-top: 100px;
-        padding-bottom: 20px;
+@media (max-width: 768px) {
+    .Location {
         flex-direction: column;
-        align-items: center;
-        width: 90%;
-    }
-
-    .ContactDetails {
-        max-width: 100%;
-        margin-left: 0;
-        margin-bottom: 30px;
-        text-align: center;
-    }
-
-    .LogoFooter {
-        width: 60%;
-
-        margin: 0 auto;
-    }
-
-    .ContactDetails {
-        width: 80%;
         height: auto;
-        font-size: 15px;
-        margin: auto;
+        padding: 10px;
     }
 
-    .Map {
-        width: 70%;
-        height: auto;
-        margin-bottom: 20px;
-    }
-
-    input {
-        width: 80%;
-        margin-bottom: 10px;
-    }
-
-    form {
-        flex-direction: column;
+    .Location>* {
+        padding-top: 5%;
         align-items: center;
+        justify-content: center;
     }
 
-    .Name {
-        width: 200px;
-        height: 10px;
-        margin: 5px;
-    }
-
-    .Email {
-        width: 200px;
-        height: 10px;
-        margin: 5px;
-    }
-
-    .Email::-webkit-input-placeholder {
-        transform: translate(0, 0);
-    }
-
-    .SignUpButton {
-        transform: translate(0, 0);
-        margin-top: 10px;
-    }
-
-    .FooterEnd {
-        width: 80%;
-        height: 50px;
-        background-color: #f4e7d8;
-        border-radius: 35px 35px 0 0;
-        text-align: center;
-        margin: auto;
-        font-size: 20px;
-        font-weight: 400;
-        color: #88837f;
-    }
 }

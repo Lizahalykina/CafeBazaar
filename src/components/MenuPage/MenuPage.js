@@ -5,12 +5,12 @@ import "./MenuPage.css";
 function MenuPage({ menuRef }) {
     const menu = [
         {
-            name: "Almond Croissant",
+            name: "Salmon Avocado Toast",
             description:
-                "This exquisite croissant is generously filled with a smooth almond cream, topped with slivered almonds.",
-            imageSrc: "/MockAssets/croissant.png",
+                "Open-faced toast topped with creamy avocado mash, fresh smoked salmon, and a sprinkle of microgreens.",
+            imageSrc: "/MockAssets/Toast.png",
             ingredients:
-                "All-purpose flour, Fresh lavender, Almonds, Local honey, Butter, Baking powder, Salt, Heavy cream",
+                "Bread, Avocado, Smoked salmon, Lemon juice, Red pepper flakes, Olive oil.",
         },
         {
             name: "Waffle",
@@ -31,12 +31,13 @@ function MenuPage({ menuRef }) {
     ];
 
     const openPdf = () => {
-        window.open("/path/to/your/menu.pdf", "_blank");
+        window.open("/MockAssets/Menu.pdf", "_blank");
     };
 
     return (
         <div className="DrinkSlider" ref={menuRef}>
             <div className="GridContainer">
+                <h2 className="Menu-title">Menu</h2>
                 {menu.slice(0, 3).map((item, index) => (
                     <div className="GridItem" key={index}>
                         <DrinkCard
@@ -47,10 +48,10 @@ function MenuPage({ menuRef }) {
                         />
                     </div>
                 ))}
+                <button className="menu-toggle" onClick={openPdf}>
+                    See Full Menu
+                </button>
             </div>
-            <button className="menu-toggle" onClick={openPdf}>
-                See Full Menu
-            </button>
         </div>
     );
 }

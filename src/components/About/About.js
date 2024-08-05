@@ -11,22 +11,21 @@ function About() {
                 <h3>Sourced directly from farmers</h3>
                 <h4>
                     Our journey begins with sourcing the finest beans from
+                    <br />
                     sustainable farms around the world. We meticulously select
+                    <br />
                     only the highest quality beans, ensuring that each one meets
-                    our rigorous standards for flavor and aroma.
+                    our <br />
+                    rigorous standards for flavor and aroma.
                 </h4>
             </div>
-            <img
-                className="SecondImg"
-                src={"/MockAssets/croissant.png"}
-                alt="Logo"
-            />
+
             <div className="TextBlock spread">
-                <h2>Great coffee</h2>
-                <h2>
-                    and fresh
-                    <br /> pastries
-                </h2>
+                <img
+                    className="SecondImg"
+                    src={"/MockAssets/collage.png"}
+                    alt={"collage"}
+                />
             </div>
         </div>
     );

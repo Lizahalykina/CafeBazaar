@@ -5,21 +5,30 @@ function MainSection() {
     return (
         <div className="MainSection">
             <div className="TextBlock">
-                <h1>
+                <h1 className="desktop-heading">
                     Cafe
                     <br />
                     Bazaar
                 </h1>
-                <p>
+                <img
+                    className="h1Logo mobile-heading"
+                    src={"/MockAssets/Logo.png"}
+                    alt="Logo"
+                />
+                <p className="desktop-text">
                     Your favourite specialist coffee
                     <br />
                     served in the heart of Bratislava.
                 </p>
+                <p className="mobile-text">
+                    Your favourite specialist coffee served in the heart of
+                    Bratislava.
+                </p>
             </div>
             <img
                 className="MainImg"
-                src={"/MockAssets/croissant.png"}
-                alt="Logo"
+                src={"/MockAssets/Plain-Croissant.png"}
+                alt="Main"
             />
         </div>
     );
